@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+html,body{
+    margin: 0%;
+    font-family: 'Roboto Mono', monospace;
+}
+.be-red{
+    background-color: #1196A8;
+}
+.white{
+    color: white
+}
+.large-padding{
+    padding: 8px 7px
+}
+
+a,a:visited{
+    color: inherit !important;
+    text-decoration: none;
+}
