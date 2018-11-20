@@ -1,8 +1,19 @@
+<div style="width:80%;margin:0 auto;">
+<h1>Crear Articulo</h1>
 <%= form_for(@article) do |f|%>
+  <% @article.errors.full_messages.each do |message| %>
+     <div class="be-red white top-space">
+       * <%= message %>
+     </div>
+  <%end%>
   <div class="field">
-  <%= f.text_field :title, placeholder: "Titulo" %>
+  <%= f.text_field :title, placeholder: "Titulo",class:"form-control" %>
   </div>
   <div class="field">
-    <%= f.text_area :body, placeholder: "Escribe aqui el articulo"%>
+    <%= f.text_area :body, placeholder: "Escribe aqui el articulo", style:"height:250px;",class:"form-control"%>
+  </div>
+  <div class="field">
+    <%= f.submit "Guardar" ,class:"btn be-red white"%>
   </div>
 <%end%>
+</div>

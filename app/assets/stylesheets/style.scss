@@ -3,6 +3,18 @@ html,body{
     margin: 0%;
     font-family: 'Roboto Mono', monospace;
 }
+.btn{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 10px 12px;
+}
+.top-space{
+    margin-top: 1em;
+}
 .be-red{
     background-color: #1196A8;
 }
@@ -25,3 +37,18 @@ a,a:visited{
 #logo{
     font-size: 1.2em;
 }
+
+.field{
+    margin-top: 1em;
+}
+
+.form-control{
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    width: 100%;
+    display: block;
+    padding: 10px 0px;
+    font-size: 1.2em;
+}
+
