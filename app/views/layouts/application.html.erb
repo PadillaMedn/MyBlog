@@ -9,11 +9,6 @@
   </head>
 
   <body>
-
-  <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
-
   <header>
     <nav class="be-red white large-padding">
        <ul class="no-list row center-xs middle-xs">
@@ -32,9 +27,19 @@
          <h5 class="col-md">
               Tecnologia
          </h5>
+         <% if user_signed_in? %>
+          <h5 class="col-md">
+             <%= link_to "Cerrar sesion", destroy_user_session_path,method: :delete %>
+          </h5>
+         <% end %>
        </ul>
     </nav>
   </header>
+
+  
+  <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>
