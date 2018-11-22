@@ -1,7 +1,7 @@
-<h1>Bienvenidos a mi blog!</h1>
-<% [1,2,3,4,5].each do |number|%>
-    <p>Numero: <%= number%></p>
-<% end %>
+<% if user_signed_in?%>
+<h1>Bienvenido <%= current_user.email%></h1>
+<%end%>
+
 
 
 
