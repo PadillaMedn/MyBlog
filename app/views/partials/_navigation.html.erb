@@ -5,13 +5,13 @@
             <h1 class="no-margin" id="logo">  <%= link_to "MyBlog", root_path%></h1>
          </div>
          
+         <h4 class="col-md">
+             <%= link_to "Articulos", articles_path%>
+         </h4>
          <h5 class="col-md">
-              Articulos
+            Mis Articulos
          </h5>
-         <h5 class="col-md">
-              Mis Articulos
-         </h5>
-       
+         
          <% if user_signed_in? %>
           <h5 class="col-md">
              <%= link_to "Cerrar sesion", destroy_user_session_path,method: :delete %>

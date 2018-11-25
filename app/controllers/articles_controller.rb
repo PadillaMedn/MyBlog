@@ -17,26 +17,41 @@ class ArticlesController < ApplicationController
     end
     def create
         @article = current_user.articles.new(article_params)
-
-        if  @article.save
-             redirect_to @article
-        else
-            render :new
-        end 
+        if @article.save
+            flash[:success] = "Articulo publicado exitosamente"
+            
+            redirect_to @article
+          else
+            flash[:error] = "Algo salio mal, el post no fue publicado"
+            render 'new'
+          end
     end
     def destroy
         
-        @article.destroy
-        redirect_to articles_path
+        if @article.destroy #elimina el objeto de la base de datos
+            flash[:success] = 'Article was successfully deleted.'
+            redirect_to articles_url
+       else
+            flash[:error] = 'Something went wrong'
+            redirect_to articles_url
+       end
     end
     def update
        
-        if @article.update(article_params)
-            redirect_to @article
+        @article = Article.find(params[:id])
+        if @article.update_attributes(article_params)
+          flash[:success] = "Article was successfully updated"
+          redirect_to @article
         else
-           render :edit
+          flash[:error] = "Something went wrong"
+          render :edit
         end
     end
+
+    def myarticles
+        #ordenando desde el ultimo al primero
+       @articles = current_user.articles.order("created_at DESC")
+  end
 
     private
 

@@ -14,7 +14,7 @@ html,body{
 }
 
 .be-red{
-    background-color: #1196A8;
+    background-color: #0A603D;
 }
 .white{
     color: white
@@ -33,11 +33,11 @@ a,a:visited{
 }
 
 #logo{
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 .field,.top-space,.actions{
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .form-control{
@@ -57,22 +57,44 @@ a,a:visited{
 .text-left{
     text-align: left;
 }
+.prime{
+    margin-left: 3%;
+    margin-top: -1%;
+}
 
 .star{
-    margin-top: 2.2em;
+    
+    margin-top: 1em;
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background-color: rgb(192, 161, 168);
+    
 }
 .bg-idm{
     margin-top: 2.2em;
     color: rgb(252, 249, 249);
     font-size:16px;
-    background-color: rgb(25, 48, 49);
+    
     margin-right: 70%;
 }
-.container{
-    background-color: #1196A8
+
+.img{
+    background-image: url(https://static.tumblr.com/b53da857a929276fa26ab16f65331636/x0nnuui/vPfpcest2/tumblr_static_filename_640_v2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+.navcolor{
+     background-color: #3F5866;
+}
+
+.color{
+     color: rgb(255, 0, 128);
+}
+.title{
+     color: #3F5866 !important;
+}
+
 
