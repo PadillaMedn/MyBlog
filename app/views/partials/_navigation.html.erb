@@ -8,14 +8,14 @@
          <h4 class="col-md">
              <%= link_to "Articulos", articles_path%>
          </h4>
-         <h5 class="col-md">
+         <h4 class="col-md">
             <%= link_to "Mis Articulos", myarticles_path %>
-         </h5>
+         </h4>
          
          <% if user_signed_in? %>
-          <h5 class="col-md">
+          <h4 class="col-md">
              <%= link_to "Cerrar sesion", destroy_user_session_path,method: :delete %>
-          </h5>
+          </h4>
          <% else %>
          <h4 class="col-md">
            <%= link_to "iniciar sesion",new_user_session_path%>
