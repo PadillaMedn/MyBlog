@@ -47,9 +47,7 @@ class CommentsController < ApplicationController
   end
 
   private
-  def set_article
-    @article = Article.find(params[:article_id])
-  end
+  
   
     # Use callbacks to share common setup or constraints between actions.
     def set_comment

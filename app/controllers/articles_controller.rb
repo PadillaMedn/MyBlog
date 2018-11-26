@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
     before_action :authenticate_user!, except: [:show,:index]
-    before_action :set_article, except: [:index,:new,:create]
+    
    
     def index
      @articles = Article.all
     end
     def show
+         @article = Article.find(params[:id])
         @article.update_visits_count
         @comment = Comment.new
     end
@@ -13,9 +14,10 @@ class ArticlesController < ApplicationController
       @article = Article.new
     end
     def edit
-   
+      @article = Article.find(params[:id])
     end
     def create
+
         @article = current_user.articles.new(article_params)
         if @article.save
             flash[:success] = "Articulo publicado exitosamente"
@@ -44,18 +46,14 @@ class ArticlesController < ApplicationController
     end
 
   
-
-    def myarticles
-        #ordenando desde el ultimo al primero
-       @articles = current_user.articles.order("created_at DESC")
+  def myarticles
+      @myarticles = current_user.articles.order("created_at DESC")
   end
-
+  
 
     private
 
-    def set_article
-        @article = Article.find(params[:id])
-   end
+   
    
 
     def article_params
