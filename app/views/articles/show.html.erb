@@ -20,7 +20,8 @@
   <ul id="comments-box">
     <% @article.comments.each do |comment|%>
        <li>
-          <%= comment.body %> - <%= comment.user.email%>
+          <%= comment.body %> - <%= comment.user.email%> 
+         <%= link_to "Eliminar",article_comment_path(@article, comment),method: :delete,class:"red" %>
        </li>
   <% end %>
   </ul>
