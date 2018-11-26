@@ -1,4 +1,4 @@
-<h1><%= @article.title %></h1>
+<h1><%= @article.title %> - <%= link_to "Eliminar",@article,method: :delete,class:"red" %></h1>
 <% unless @article.user.nil?%>
 <p>
   Escrito por: <%= @article.user.email%>

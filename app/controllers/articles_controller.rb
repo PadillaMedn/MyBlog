@@ -27,14 +27,9 @@ class ArticlesController < ApplicationController
           end
     end
     def destroy
-        
-        if @article.destroy #elimina el objeto de la base de datos
-            flash[:success] = 'Article was successfully deleted.'
-            redirect_to articles_url
-       else
-            flash[:error] = 'Something went wrong'
-            redirect_to articles_url
-       end
+        @article = Article.find(params[:id])
+        @article.destroy
+        redirect_to articles_url
     end
     def update
        
@@ -48,10 +43,13 @@ class ArticlesController < ApplicationController
         end
     end
 
+  
+
     def myarticles
         #ordenando desde el ultimo al primero
        @articles = current_user.articles.order("created_at DESC")
   end
+
 
     private
 
