@@ -41,4 +41,4 @@ luego en config => database.yml
 
 cambiar el adapter de postgresql a sqlite3
 
-correr el servidor para revizar que este funcionando correctamente
+correr el servidor para revisar que este funcionando correctamente
