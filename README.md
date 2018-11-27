@@ -22,3 +22,23 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+* primer paso clonar el proyecto 
+
+*luego cambiar la configuracion en gemfile comentar  o eliminar esta parte:
+
+ group :production do
+  gem 'pg'
+ end
+ 
+ y colocar 
+ 
+ gem 'sqlite3' 
+ 
+ despues ejecutar bundle install
+
+luego en config => database.yml
+
+cambiar el adapter de postgresql a sqlite3
+
+correr el servidor para revizar que este funcionando correctamente
