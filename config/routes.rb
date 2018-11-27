@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   devise_for :user
-  root to: 'welcome#index'
+  root to: 'articles#index'
   get 'myarticles', to: 'articles#myarticles'
  
 
